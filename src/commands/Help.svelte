@@ -10,7 +10,7 @@
   ];
 </script>
 
-<div class="ml-[2ch] text-xs">
+<div class="ml-[2ch]">
   <br />
   <h6>You can use tab key for suggestions</h6>
   <h6>You can use arrow up key for previous commands</h6>
