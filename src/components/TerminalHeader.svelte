@@ -3,9 +3,9 @@
 </script>
 
 <div
-  class="px-2 py-1 shadow-md font-mono mx-auto flex gap-2 w-full items-center justify-between  bg-zinc-700 text-white"
+  class="px-2 py-1 shadow-md font-mono mx-auto flex gap-2 w-full items-center justify-between relative  bg-zinc-700 text-white"
 >
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2 absolute">
     <span class="block rounded-full bg-red-500 h-3 w-3" />
     <span class="block rounded-full bg-yellow-500 h-3 w-3" />
     <span class="block rounded-full bg-green-500 h-3 w-3" />
