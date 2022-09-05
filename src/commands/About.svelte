@@ -9,7 +9,7 @@
       <img class="h-full" src="dp.jpg" alt="profile" />
     </div>
     <div>
-      <p>Hi, my name is <b>Mahendra Suthar</b>.</p>
+      <p>Hi, my name is <b class="text-teal-400">Mahendra Suthar</b>.</p>
       <p>I am a Fullstack developer</p>
       <p>I like to build some awesome projects</p>
       <p>Please type help to know more about me.</p>

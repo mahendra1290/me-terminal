@@ -103,7 +103,7 @@
   class="min-h-[100vh] text-white bg-zinc-600 flex justify-center items-center"
 >
   <div
-    class="w-full flex flex-col max-w-4xl h-screen md:h-[33rem] text-sm font-mono shadow-md rounded-lg overflow-hidden bg-zinc-900 border-current"
+    class="w-full flex flex-col max-w-4xl h-screen md:h-[560px] text-sm font-mono shadow-md rounded-lg overflow-hidden bg-zinc-900 border-current"
   >
     <TerminalHeader title={"github/mahendra1290"} />
     <div bind:this={container} class="py-2 px-2 overflow-auto">

@@ -1,12 +1,16 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
+  import { afterUpdate } from "svelte";
   const dispatch = createEventDispatcher();
   export let value: string = "";
+
+  let dateStr = new Date().toLocaleTimeString("en-US");
 
   const handleSubmit = () => {
     dispatch("enterkeydown", {
       value,
     });
+    dateStr = new Date().toLocaleTimeString("en-US");
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -28,16 +32,22 @@
   };
 </script>
 
-<form on:submit|preventDefault={handleSubmit} class="w-full relative">
-  <input
-    type="text"
-    on:blur={(e) => e.target.focus()}
-    class="grow text-white outline-none border-none bg-transparent w-full text-sm"
-    bind:value
-    on:keydown={handleKeyDown}
-  />
-  <p
-    class="border-r-8 border-gray-200 border-opacity-80 absolute inset-0 -left-[1px]"
-    style="width: {value.length + 1}ch;"
-  />
-</form>
+<div class="flex w-full items-center justify-between">
+  <form
+    on:submit|preventDefault={handleSubmit}
+    class="w-full relative flex-grow"
+  >
+    <input
+      type="text"
+      on:blur={(e) => e.target.focus()}
+      class="grow text-white outline-none border-none bg-transparent w-full text-sm"
+      bind:value
+      on:keydown={handleKeyDown}
+    />
+    <p
+      class="border-r-8 border-gray-200 border-opacity-80 absolute inset-0 -left-[1px]"
+      style="width: {value.length + 1}ch;"
+    />
+  </form>
+  <p class="text-xs whitespace-nowrap text-gray-500">{dateStr}</p>
+</div>
