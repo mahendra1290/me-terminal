@@ -3,8 +3,7 @@
   const dispatch = createEventDispatcher();
   export let value: string = "";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     dispatch("enterkeydown", {
       value,
     });
@@ -29,12 +28,16 @@
   };
 </script>
 
-<form on:submit={handleSubmit}>
+<form on:submit|preventDefault={handleSubmit} class="w-full relative">
   <input
     type="text"
     on:blur={(e) => e.target.focus()}
     class="grow text-white outline-none border-none bg-transparent w-full text-sm"
     bind:value
     on:keydown={handleKeyDown}
+  />
+  <p
+    class="border-r-8 border-gray-200 border-opacity-80 absolute inset-0 -left-[1px]"
+    style="width: {value.length + 1}ch;"
   />
 </form>
