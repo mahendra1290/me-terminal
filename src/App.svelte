@@ -81,10 +81,10 @@
       "My name is <b class='underline'>Mahendra suthar</b> and I am a full stack engineer. I like to learn new things, and be efficient in my process. How have knowlege of both frontend and backend",
     age: "My name is mahendra suthar",
     education: "My name is mahendra suthar",
-    atix: "My name is mahendra suthar",
-    exit: "Thanks for visiting closing this in 3 sec",
+    experience: "My name is mahendra suthar",
+    socials: "My name is mahendra suthar",
     contact: "Mail: mahendra.suthar.1290@gmail.com phone: +91 82099 40205",
-    github:
+    skills:
       "-----> <a class='text-blue-400' href='https://github.com/mahendra1290' target='blank'>https://github.com/mahendra1290</a> use -o to open in new tab",
     linkedin:
       "-----> <a class='text-blue-400' href='https://linkedin.com/in/mahendra1290' target='blank'>https://linkedin.com/in/mahendra1290</a> use -o to open in new tab",
@@ -130,6 +130,10 @@
       <div class="flex flex-wrap gap-2">
         {#each suggestions as sug, ind}
           <span
+            on:click={() => {
+              focusedSug = ind;
+              input = sug;
+            }}
             class={ind === focusedSug
               ? "bg-gray-50 text-black rounded-sm px-2"
               : "bg-none px-2"}>{sug}</span

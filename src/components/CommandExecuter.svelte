@@ -4,6 +4,9 @@
   import CommandLine from "./CommandLine.svelte";
   import CommandNotFound from "./CommandNotFound.svelte";
   import Education from "../commands/Education.svelte";
+  import Experience from "../commands/Experience.svelte";
+  import Socials from "../commands/Socials.svelte";
+  import Skills from "../commands/Skills.svelte";
 
   export let commands: string[];
 
@@ -22,6 +25,12 @@
     <Help />
   {:else if command === "education"}
     <Education />
+  {:else if command === "experience"}
+    <Experience />
+  {:else if command === "socials"}
+    <Socials input={commands[index]} />
+  {:else if command === "skills"}
+    <Skills />
   {:else if command !== ""}
     <CommandNotFound input={command} />
   {/if}
