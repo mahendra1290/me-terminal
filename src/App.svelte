@@ -69,6 +69,14 @@
     input = commandHistory.at(currInd) || "";
   };
 
+  const handleArrowDownKeyDown = (e) => {
+    if (Math.abs(currInd) === commandHistory.length) {
+      currInd = 0;
+    }
+    currInd++;
+    input = commandHistory.at(currInd) || "";
+  };
+
   const clearTerminal = () => {
     input = "";
     output = [];
@@ -115,6 +123,7 @@
           on:enterkeydown={handleEnterKeyDown}
           on:tabkeydown={handleTabKeyDown}
           on:arrowupkeydown={handleArrowUpKeyDown}
+          on:arrowdownkeydown={handleArrowDownKeyDown}
           on:userinput={() => {
             if (suggestions.length > 0) {
               suggestions = [];

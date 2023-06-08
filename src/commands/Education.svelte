@@ -12,7 +12,8 @@
       name: "Saint Teressa school",
       stream: "B.Tech in Computer Engineering",
       place: "Jodhpur Rajasthan IN",
-      from: "2016",
+      from: "2015",
+      to: "2016",
       score: "83.67 %",
     },
   ];

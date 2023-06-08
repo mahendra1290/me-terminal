@@ -23,6 +23,11 @@
       dispatch("arrowupkeydown", {
         value,
       });
+    } else if (e.code === "ArrowDown") {
+      e.preventDefault();
+      dispatch("arrowdownkeydown", {
+        value,
+      });
     } else if (e.code === "KeyL" && e.ctrlKey) {
       dispatch("clear");
     } else {
@@ -45,6 +50,7 @@
   >
     <input
       type="text"
+      autofocus
       on:blur={(e) => e.target.focus()}
       class="grow text-white outline-none border-none bg-transparent w-full text-sm"
       bind:value

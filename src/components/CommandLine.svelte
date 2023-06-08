@@ -3,6 +3,6 @@
 </script>
 
 <div>
-  <span class="text-red-500">></span>
+  <span class="text-red-500">{">"}</span>
   {input}
 </div>
